@@ -1,0 +1,163 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* Varibles css */
+:root {
+    /* COLORS */
+    --main-color: #333;
+    --main-color-light: #FFF;
+    
+    /* Font weight */
+    --font-thin: 100;
+    --font-light: 300;
+    --font-reglar: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+    --font-black: 900;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1.h2,h3,ul,p {
+    margin: 0;
+}
+
+h1,h2,h3 {
+    color:var(--main-color);
+    font-weight: var(--font-medium);
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Container */
+
+#container {
+    max-width: 968px;
+    width: 100%;
+    display: flex;
+}
+
+
+
+/* Left_side */
+
+.left__side {
+    width: 301px;
+    background-color: #4d628d;
+    padding: 2rem 2.063rem 8.25rem;
+    height: 100%;
+}
+
+.logo {
+    width: 100px;
+    margin: 0 auto;
+}
+
+/* Profile */
+
+.profile {
+    margin: 2.5rem 0  ;
+    text-align: center;
+}
+
+.profile img {
+    overflow:hidden;
+    border-radius: 50%;
+}
+
+.profile__title {
+    font-size: 1.875rem;
+    color:var(--main-color-light);
+    margin: 1.688rem 0 1.125rem;
+    font-weight:var(--font-medium);
+}
+
+.profile__team {
+    letter-spacing: .125rem;
+    color:var(--main-color-light);
+    font-weight:var(--font-light);
+}
+
+
+/* Nav */
+
+
+.nav__link {
+    font-size: 1.438rem;
+    display: inline-block;
+    width: 100%;
+    height: 2.563rem;
+    color: rgba(255, 255, 255, 0.66);
+    font-weight:var(--font-light);
+    font-size: 1.438rem;
+    position: relative;
+}
+.nav__link:hover {
+    background-color: #697a9b;
+    color: var(--main-color-light);
+}
+
+.nav__icon {
+    font-size: 24px;
+    margin: 0.625rem 1.5rem 0 1.25rem;
+}
+
+.nav__icon::before {
+    margin: 100px;
+}
+
+/* sub_menu */
+.sub__menu {
+    font-size: 1.438rem;
+    margin: 1.125rem 4.125rem ;
+    display: none;
+}
+.sub__menu li a {
+    color: rgba(255, 255, 255, 0.66);
+}
+.sub__menu li a:hover {
+    color:var(--main-color-light);
+}
+.sub__menu li:last-child {
+    margin-top: 18px;
+}
+
+/* setting */
+.setting {
+    margin-top: 7.5rem;
+}
+
+.setting__title {
+    font-size: 1.438rem;
+    margin-left: 1.25rem;
+    color:var(--main-color-light);
+}
+
+.setting__list {
+    margin-top: 1.875rem;
+}
+
+
+.right__side {
+}
