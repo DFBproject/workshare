@@ -1,163 +1,174 @@
 /* Google font */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 /* Varibles css */
 :root {
-    /* COLORS */
-    --main-color: #333;
-    --main-color-light: #FFF;
-    
-    /* Font weight */
-    --font-thin: 100;
-    --font-light: 300;
-    --font-reglar: 400;
-    --font-medium: 500;
-    --font-bold: 700;
-    --font-black: 900;
+  /* COLORS */
+  --main-color: #333;
+  --main-color-light: #fff;
+
+  /* Font size */
+  --font-small: 0.88rem;
+  --font-medium: 1rem;
+  --font-large: 1.13rem;
+  --font-x-large: 1.5rem;
+  --font-xx-large: 2rem;
+
+  /* Font weight */
+  --weight-thin: 100;
+  --weight-light: 300;
+  --weight-reglar: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+  --weight-black: 900;
 }
 
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
-h1.h2,h3,ul,p {
-    margin: 0;
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
 }
 
-h1,h2,h3 {
-    color:var(--main-color);
-    font-weight: var(--font-medium);
+h1,
+h2,
+h3 {
+  color: var(--main-color);
+  font-weight: var(--font-medium);
 }
 
 ul {
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
 
 /* Container */
 
 #container {
-    max-width: 968px;
-    width: 100%;
-    display: flex;
+  max-width: 968px;
+  width: 100%;
+  display: flex;
+  height: 100vh;
 }
-
-
 
 /* Left_side */
 
 .left__side {
-    width: 301px;
-    background-color: #4d628d;
-    padding: 2rem 2.063rem 8.25rem;
-    height: 100%;
-}
-
-.logo {
-    width: 100px;
-    margin: 0 auto;
+  width: 300px;
+  background-color: #4d628d;
+  padding: 2rem 2.063rem 8.25rem;
 }
 
 /* Profile */
 
 .profile {
-    margin: 2.5rem 0  ;
-    text-align: center;
+  margin: 2.5rem 0;
+  text-align: center;
+  /* background-color: #fff; */
 }
 
 .profile img {
-    overflow:hidden;
-    border-radius: 50%;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 140px;
 }
 
 .profile__title {
-    font-size: 1.875rem;
-    color:var(--main-color-light);
-    margin: 1.688rem 0 1.125rem;
-    font-weight:var(--font-medium);
+  font-size: 1.875rem;
+  color: var(--main-color-light);
+  margin: 1.688rem 0 1.125rem;
+  font-weight: var(--weight-medium);
 }
 
 .profile__team {
-    letter-spacing: .125rem;
-    color:var(--main-color-light);
-    font-weight:var(--font-light);
+  letter-spacing: 0.125rem;
+  color: var(--main-color-light);
+  font-weight: var(--weight-light);
 }
-
 
 /* Nav */
-
-
+.nav__menu {
+  /* background-color: #fff; */
+}
 .nav__link {
-    font-size: 1.438rem;
-    display: inline-block;
-    width: 100%;
-    height: 2.563rem;
-    color: rgba(255, 255, 255, 0.66);
-    font-weight:var(--font-light);
-    font-size: 1.438rem;
-    position: relative;
+  font-size: 1.438rem;
+  display: inline-block;
+  width: 100%;
+  height: 2.563rem;
+  color: rgba(255, 255, 255, 0.66);
+  font-weight: var(--weight-light);
+  position: relative;
 }
 .nav__link:hover {
-    background-color: #697a9b;
-    color: var(--main-color-light);
+  background-color: #697a9b;
+  color: var(--main-color-light);
 }
 
 .nav__icon {
-    font-size: 24px;
-    margin: 0.625rem 1.5rem 0 1.25rem;
+  font-size: 24px;
+  margin: 0.625rem 1.5rem 0 1.25rem;
 }
 
 .nav__icon::before {
-    margin: 100px;
+  margin: 100px;
 }
 
 /* sub_menu */
 .sub__menu {
-    font-size: 1.438rem;
-    margin: 1.125rem 4.125rem ;
-    display: none;
+  font-size: 1.438rem;
+  margin: 1.125rem 4.125rem;
+  display: none;
 }
 .sub__menu li a {
-    color: rgba(255, 255, 255, 0.66);
+  color: rgba(255, 255, 255, 0.66);
 }
 .sub__menu li a:hover {
-    color:var(--main-color-light);
+  color: var(--main-color-light);
 }
 .sub__menu li:last-child {
-    margin-top: 18px;
+  margin-top: 18px;
 }
 
 /* setting */
 .setting {
-    margin-top: 7.5rem;
+  margin-top: 7.5rem;
+  /* background-color: red; */
 }
 
 .setting__title {
-    font-size: 1.438rem;
-    margin-left: 1.25rem;
-    color:var(--main-color-light);
+  font-size: 1.438rem;
+  margin-left: 1.25rem;
+  color: var(--main-color-light);
 }
 
 .setting__list {
-    margin-top: 1.875rem;
-}
-
-
-.right__side {
+  margin-top: 1.875rem;
 }
