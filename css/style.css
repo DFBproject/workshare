@@ -4,8 +4,12 @@
 /* Varibles css */
 :root {
   /* COLORS */
-  --main-color: #333;
-  --main-color-light: #fff;
+  --main-color: #4d628d;
+  --menu-font-color: #fff;
+  --button_color: #0675E6;
+  --background-color:#F6F6F6;
+  --content-color : #fff;
+  --content-font-color : #333;
 
   /* Font size */
   --font-small: 0.88rem;
