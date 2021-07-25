@@ -1,557 +1,143 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkShare</title>
+
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <!--link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+    crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- 전체 컨테이너 -->
-    <div id="container">
-        <!-- 전체 컨테이너 -->
-        <section class="left__side">
-            <!-- 왼쪽 카테고리 영역 div -->
-            <div class="logo">워크쉐어</div>
-            <div class="profile">
-                <img src="./images/bear.png" alt="profile">
-                <h1 class="profile__title">홍길동</h1>
-                <h3 class="profile__team">개발팀/사원</h3>
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <div class="header__container">
+            <img src="images/bear.png" alt="" class="header__img">
+
+            <a href="#" class="header__logo ">WorkShare</a>
+
+            <div class="header__search">
+                <input type="search" placeholder="Search" class="header__input">
+                <i class="fas fa-search header__icon"></i>
             </div>
-            <nav class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#none" class="nav__link">
-                            <img src="./images/home.png" alt="home" class="nav__icon">
-                            <span>홈</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#none" class="nav__link">
-                            <img src="./images/watch.png" alt="watch" class="nav__icon">
-                            <span>출퇴근기록</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#none" class="nav__link">
-                            <img src="./images/calendar.png" alt="calendar" class="nav__icon">
-                            <span>워크플로우</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#none" class="nav__link">
-                            <img src="./images/address.png" alt="address" class="nav__icon">
-                            <span>주소록</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="setting">
-                <h1 class="setting__title">설정</h1>
-                <ul class="setting__list">
-                    <li class="setting__item">
-                        <a href="#none" class="nav__link">
-                            <img src="./images/profile.png" alt="profile" class="nav__icon">
-                            <span>프로필</span>
-                        </a>
-                    </li>
-                    <li class="setting__item">
-                        <a href="#none" class="nav__link">
-                            <img src="./images/company.png" alt="conpany" class="nav__icon">
-                            <span>회사</span>
-                        </a>
-                    </li>
-                </ul>
+
+            <div class="header__toggle">
+                <i class="fas fa-bars" id="header-toggle"></i>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <section class="right__side">
-            <!-- 오른쪽 메인 영역 div -->
-            <div class="alarm">
-                <!-- 돋보기, 메시지,알람 이미지 넣을 div-->
-            </div>
-            <div class="date_record">
-                <!-- 시간 및 휴가 생성요청, 출퇴근기록 버튼 넣을 div-->
-                <div class="date">
-                    <p>2021.07</p>
-                    <button id="date_prev">&lang;</button>
-                    <button id="date_next">&rang;</button>
-                </div>
-                <div class="record">
-                    <button id="require">휴가 생성 요청</button>
-                    <button id="record">출퇴근 기록</button>
-                </div>
-            </div>
-            <div id="work_hours">
-                <!-- 총 예정근무 및 휴가 전체 컨테이너 div-->
-                <div class="total_work">
-                    <!-- 총 예정근무 컨테이너 div-->
-                    <div class="total_work_title">
-                        <p>총 예정 근무</p>
-                    </div>
-                    <div class="time_info">
-                        <p><span>40</span>시간</p>
-                        <progress value="40" max="100"></progress>
-                        <p>자동 근무 기록 오전 09:00~ 오후 06:00</p>
-                    </div>
-                </div>
-                <div class="vacation">
-                    <div class="total_work_title">
-                        <p>휴가</p>
-                    </div>
-                    <div class="vacation_info">
-                        <p><span>0</span>시간</p>
-                        <progress value="0" max="100"></progress>
-                    </div>
-                </div>
-            </div>
-            <div id="week_work_hours">
-                <!--이번 주 근무 컨테이너 div-->
-                <div>
-                    <p>이번 주 근무</p>
-                </div>
+    <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <a href="#" class="nav__link nav__logo">
+                    <span class="nav__logo-name">Work</span><span class="nav__logo-name_back">Share</span>
+                    
+                </a>
 
-                <div class="this_week_work">
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Profile</h3>
 
-                    <!-- --------------------------------월요일 부분------------------------------------- -->
-                    <div class="day1">
-                        <!--js를 통해 시간이 지날 시 오늘 날짜에서 하루를 빼면 됨.-->
-                        <div class="today_time">
-                            <div>
-                                <p>6.14(월)</p>
-                            </div>
-                            <div>
-                                <p>근무</p>
-                            </div>
-                            <div>
-                                <p>오전 09:00 ~ 오후 06:00</p>
-                            </div>
-                            <div>
-                                <p>8H</p>
-                                <progress value="8" max="8"></progress>
-                            </div>
-                        </div>
+                        <a href="#" class="nav__link active">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span class="nav__name">홈</span>
+                        </a>
+                        
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class="far fa-clock nav-icon"></i>
+                                <span class="nav__name">출퇴근관리</span>
+                                <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
+                            </a>
 
-                        <div class="today_work_hours">
-                            <!--오늘 날짜 컨테이너의 하단 근무시간 표시부분 div 오늘이 아닐때는 display:none-->
-                            <div>
-                                <p>총 근무시간</p>
-                                <p>8시간</p>
-                            </div>
-                            <div>
-                                <form>
-                                    <select name="break_time">
-                                        <option value="thirty_minutes">30분 휴식</option>
-                                        <option value="one_hour" selected>1시간 휴식</option>
-                                    </select>
-                                </form>
-                            </div>
-                            <div>
-                                <div>
-                                    <ul>
-                                        <!--space-between으로 정렬-->
-                                        <li>6</li>
-                                        <li>8</li>
-                                        <li>10</li>
-                                        <li>12</li>
-                                        <li>14</li>
-                                        <li>16</li>
-                                        <li>18</li>
-                                        <li>20</li>
-                                        <li>22</li>
-                                        <li>24</li>
-                                        <li>2</li>
-                                        <li>4</li>
-                                    </ul>
-                                </div>
-                                <div class="progress_box_container">
-                                    <!--슬라이드쇼와 같은 원리인 컨테이너 박스 overflow:hidden -->
-                                    <div class="progress_box">
-                                        <!--시간 설정시 시간 설정대로 div 박스 움직임. -->
-                                    </div>
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="#" class="nav__dropdown-item">달력형</a>
+                                    <a href="#" class="nav__dropdown-item">목록형</a>
+                                    <a href="#" class="nav__dropdown-item">휴가신청</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- --------------------------------화요일 부분------------------------------------- -->
-                    <div class="today">
-                        <!--js를 통해 오늘 날짜 textnode추가.-->
-                        <div class="today_time">
-                            <!--오늘 날짜 컨테이너의 상단 6.15(화)부분의 수평라인 div-->
-                            <div>
-                                <p>6.15(화)</p>
-                            </div>
-                            <div>
-                                <p>오늘</p>
-                            </div>
-                            <div>
-                                <p>근무</p>
-                            </div>
-                            <div>
-                                <p>오전 09:00 ~ 오후 06:00</p>
-                            </div>
-                            <div>
-                                <p>연필 이미지</p>
-                            </div>
-                        </div>
-                        <div class="today_work_hours">
-                            <!--오늘 날짜 컨테이너의 하단 근무시간 표시부분 div-->
-                            <div>
-                                <p>총 근무시간</p>
-                                <p>8시간</p>
-                            </div>
-                            <div>
-                                <form>
-                                    <select name="break_time">
-                                        <option value="thirty_minutes">30분 휴식</option>
-                                        <option value="one_hour" selected>1시간 휴식</option>
-                                    </select>
-                                </form>
-                            </div>
-                            <div>
-                                <div>
-                                    <ul>
-                                        <!--space-between으로 정렬-->
-                                        <li>6</li>
-                                        <li>8</li>
-                                        <li>10</li>
-                                        <li>12</li>
-                                        <li>14</li>
-                                        <li>16</li>
-                                        <li>18</li>
-                                        <li>20</li>
-                                        <li>22</li>
-                                        <li>24</li>
-                                        <li>2</li>
-                                        <li>4</li>
-                                    </ul>
-                                </div>
-                                <div class="progress_box_container">
-                                    <!--슬라이드쇼와 같은 원리인 컨테이너 박스 overflow:hidden -->
-                                    <div class="progress_box">
-                                        <!--시간 설정시 시간 설정대로 div 박스 움직임. -->
+                        
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class="far fa-calendar-check nav-icon"></i>
+                                <span class="nav__name">워크플로우</span>
+                                <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
+                            </a>
 
-                                    </div>
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="#" class="nav__dropdown-item">근무관리</a>
+                                    <a href="#" class="nav__dropdown-item">휴가관리</a>
                                 </div>
                             </div>
-
                         </div>
+
+                        <a href="#" class="nav__link">
+                            <i class="far fa-address-book nav-icon"></i>
+                            <span class="nav__name">주소록</span>
+                        </a>
 
                     </div>
 
-                    <!-- --------------------------------수요일 부분------------------------------------- -->
-                    <div class="day1">
-                        <!--js를 통해 시간이 지날 시 오늘 날짜에서 하루를 빼면 됨.-->
-                        <div class="today_time">
-                            <div>
-                                <p>6.16(수)</p>
-                            </div>
-                            <div>
-                                <p>근무</p>
-                            </div>
-                            <div>
-                                <p>오전 09:00 ~ 오후 06:00</p>
-                            </div>
-                            <div>
-                                <p>8H</p>
-                                <progress value="8" max="8"></progress>
-                            </div>
-                        </div>
-                        <div class="today_work_hours">
-                            <!--오늘 날짜 컨테이너의 하단 근무시간 표시부분 div 오늘이 아닐때는 display:none-->
-                            <div>
-                                <p>총 근무시간</p>
-                                <p>8시간</p>
-                            </div>
-                            <div>
-                                <form>
-                                    <select name="break_time">
-                                        <option value="thirty_minutes">30분 휴식</option>
-                                        <option value="one_hour" selected>1시간 휴식</option>
-                                    </select>
-                                </form>
-                            </div>
-                            <div>
-                                <div>
-                                    <ul>
-                                        <!--space-between으로 정렬-->
-                                        <li>6</li>
-                                        <li>8</li>
-                                        <li>10</li>
-                                        <li>12</li>
-                                        <li>14</li>
-                                        <li>16</li>
-                                        <li>18</li>
-                                        <li>20</li>
-                                        <li>22</li>
-                                        <li>24</li>
-                                        <li>2</li>
-                                        <li>4</li>
-                                    </ul>
-                                </div>
-                                <div class="progress_box_container">
-                                    <!--슬라이드쇼와 같은 원리인 컨테이너 박스 overflow:hidden -->
-                                    <div class="progress_box">
-                                        <!--시간 설정시 시간 설정대로 div 박스 움직임. -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">설정</h3>
 
-                    <!-- --------------------------------목요일 부분------------------------------------- -->
-                    <div class="day1">
-                        <!--js를 통해 시간이 지날 시 오늘 날짜에서 하루를 빼면 됨.-->
-                        <div class="today_time">
-                            <div>
-                                <p>6.17(목)</p>
-                            </div>
-                            <div>
-                                <p>근무</p>
-                            </div>
-                            <div>
-                                <p>오전 09:00 ~ 오후 06:00</p>
-                            </div>
-                            <div>
-                                <p>8H</p>
-                                <progress value="8" max="8"></progress>
-                            </div>
-                        </div>
-                        <div class="today_work_hours">
-                            <!--오늘 날짜 컨테이너의 하단 근무시간 표시부분 div 오늘이 아닐때는 display:none-->
-                            <div>
-                                <p>총 근무시간</p>
-                                <p>8시간</p>
-                            </div>
-                            <div>
-                                <form>
-                                    <select name="break_time">
-                                        <option value="thirty_minutes">30분 휴식</option>
-                                        <option value="one_hour" selected>1시간 휴식</option>
-                                    </select>
-                                </form>
-                            </div>
-                            <div>
-                                <div>
-                                    <ul>
-                                        <!--space-between으로 정렬-->
-                                        <li>6</li>
-                                        <li>8</li>
-                                        <li>10</li>
-                                        <li>12</li>
-                                        <li>14</li>
-                                        <li>16</li>
-                                        <li>18</li>
-                                        <li>20</li>
-                                        <li>22</li>
-                                        <li>24</li>
-                                        <li>2</li>
-                                        <li>4</li>
-                                    </ul>
-                                </div>
-                                <div class="progress_box_container">
-                                    <!--슬라이드쇼와 같은 원리인 컨테이너 박스 overflow:hidden -->
-                                    <div class="progress_box">
-                                        <!--시간 설정시 시간 설정대로 div 박스 움직임. -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <a href="#" class="nav__link">
+                            <i class="far fa-user-circle nav-icon"></i>
+                            <span class="nav__name">프로필</span>
+                        </a>
 
-                    <!-- --------------------------------금요일 부분------------------------------------- -->
-                    <div class="day1">
-                        <!--js를 통해 시간이 지날 시 오늘 날짜에서 하루를 빼면 됨.-->
-                        <div class="today_time">
-                            <div>
-                                <p>6.18(금)</p>
-                            </div>
-                            <div>
-                                <p>근무</p>
-                            </div>
-                            <div>
-                                <p>오전 09:00 ~ 오후 06:00</p>
-                            </div>
-                            <div>
-                                <p>8H</p>
-                                <progress value="8" max="8"></progress>
-                            </div>
-                        </div>
-                        <div class="today_work_hours">
-                            <!--오늘 날짜 컨테이너의 하단 근무시간 표시부분 div 오늘이 아닐때는 display:none-->
-                            <div>
-                                <p>총 근무시간</p>
-                                <p>8시간</p>
-                            </div>
-                            <div>
-                                <form>
-                                    <select name="break_time">
-                                        <option value="thirty_minutes">30분 휴식</option>
-                                        <option value="one_hour" selected>1시간 휴식</option>
-                                    </select>
-                                </form>
-                            </div>
-                            <div>
-                                <div>
-                                    <ul>
-                                        <!--space-between으로 정렬-->
-                                        <li>6</li>
-                                        <li>8</li>
-                                        <li>10</li>
-                                        <li>12</li>
-                                        <li>14</li>
-                                        <li>16</li>
-                                        <li>18</li>
-                                        <li>20</li>
-                                        <li>22</li>
-                                        <li>24</li>
-                                        <li>2</li>
-                                        <li>4</li>
-                                    </ul>
-                                </div>
-                                <div class="progress_box_container">
-                                    <!--슬라이드쇼와 같은 원리인 컨테이너 박스 overflow:hidden -->
-                                    <div class="progress_box">
-                                        <!--시간 설정시 시간 설정대로 div 박스 움직임. -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class="far fa-building "></i>
+                                <span class="nav__name">회사</span>
+                                <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
+                            </a>
 
-                    <!-- --------------------------------토요일 부분------------------------------------- -->
-                    <div class="day1">
-                        <!--js를 통해 시간이 지날 시 오늘 날짜에서 하루를 빼면 됨.-->
-                        <div class="today_time">
-                            <div>
-                                <p>6.19(토)</p>
-                            </div>
-                            <div>
-                                <!--display:none -->
-                                <p>근무</p>
-                            </div>
-                            <div>
-                                <p>쉬는날</p>
-                            </div>
-                            <div>
-                                <!--display:none -->
-                                <p>8H</p>
-                                <progress value="8" max="8"></progress>
-                            </div>
-                        </div>
-                        <div class="today_work_hours">
-                            <!--오늘 날짜 컨테이너의 하단 근무시간 표시부분 div 오늘이 아닐때는 display:none-->
-                            <div>
-                                <p>총 근무시간</p>
-                                <p>8시간</p>
-                            </div>
-                            <div>
-                                <form>
-                                    <select name="break_time">
-                                        <option value="thirty_minutes">30분 휴식</option>
-                                        <option value="one_hour" selected>1시간 휴식</option>
-                                    </select>
-                                </form>
-                            </div>
-                            <div>
-                                <div>
-                                    <ul>
-                                        <!--space-between으로 정렬-->
-                                        <li>6</li>
-                                        <li>8</li>
-                                        <li>10</li>
-                                        <li>12</li>
-                                        <li>14</li>
-                                        <li>16</li>
-                                        <li>18</li>
-                                        <li>20</li>
-                                        <li>22</li>
-                                        <li>24</li>
-                                        <li>2</li>
-                                        <li>4</li>
-                                    </ul>
-                                </div>
-                                <div class="progress_box_container">
-                                    <!--슬라이드쇼와 같은 원리인 컨테이너 박스 overflow:hidden -->
-                                    <div class="progress_box">
-                                        <!--시간 설정시 시간 설정대로 div 박스 움직임. -->
-                                    </div>
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="#" class="nav__dropdown-item">직원관리</a>
+                                    <a href="#" class="nav__dropdown-item">회사설정</a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- --------------------------------일요일 부분------------------------------------- -->
-                    <div class="day1">
-                        <!--js를 통해 시간이 지날 시 오늘 날짜에서 하루를 빼면 됨.-->
-                        <div class="today_time">
-                            <div>
-                                <p>6.20(일)</p>
-                            </div>
-                            <div>
-                                <!--display:none -->
-                                <p>근무</p>
-                            </div>
-                            <div>
-                                <p>쉬는날</p>
-                            </div>
-                            <div>
-                                <!--display:none -->
-                                <p>8H</p>
-                                <progress value="8" max="8"></progress>
-                            </div>
-                        </div>
-                        <div class="today_work_hours">
-                            <!--오늘 날짜 컨테이너의 하단 근무시간 표시부분 div 오늘이 아닐때는 display:none-->
-                            <div>
-                                <p>총 근무시간</p>
-                                <p>8시간</p>
-                            </div>
-                            <div>
-                                <form>
-                                    <select name="break_time">
-                                        <option value="thirty_minutes">30분 휴식</option>
-                                        <option value="one_hour" selected>1시간 휴식</option>
-                                    </select>
-                                </form>
-                            </div>
-                            <div>
-                                <div>
-                                    <ul>
-                                        <!--space-between으로 정렬-->
-                                        <li>6</li>
-                                        <li>8</li>
-                                        <li>10</li>
-                                        <li>12</li>
-                                        <li>14</li>
-                                        <li>16</li>
-                                        <li>18</li>
-                                        <li>20</li>
-                                        <li>22</li>
-                                        <li>24</li>
-                                        <li>2</li>
-                                        <li>4</li>
-                                    </ul>
-                                </div>
-                                <div class="progress_box_container">
-                                    <!--슬라이드쇼와 같은 원리인 컨테이너 박스 overflow:hidden -->
-                                    <div class="progress_box">
-                                        <!--시간 설정시 시간 설정대로 div 박스 움직임. -->
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <a href="#" class="nav__link nav__logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav__name">Log Out</span>
+            </a>
+        </nav>
     </div>
 
-</body>
+    <!--========== CONTENTS ==========-->
+    <main>
+        <section>
+            
+        </section>
+    </main>
 
+    <!--========== MAIN JS ==========-->
+    <script src="main.js"></script>
+
+    </body>
 </html>
