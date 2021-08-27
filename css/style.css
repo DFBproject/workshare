@@ -210,14 +210,42 @@ input[type="submit"]:hover {
   min-width: 1190px;
 }
 
-.contact__main-name {
+.contact__head {
   position:relative;
-  top:90px;
-  left:50px;
+  margin-top:90px;
+}
+
+.contact__main-name ,.contact__head .contact__button {
+  display:inline-block;
+}
+
+.contact__main-name {
   font-size:26px;
   font-weight: var(--weight-bold);
   color: var(--title-color);
 }
+
+.contact__button-wrap {
+  position:relative;
+  margin-top:30px;
+}
+
+.contact__select-wrap {
+  position:relative;
+  margin-top:30px;
+  display: flex;
+}
+
+.contact__select-wrap ul {
+  display: flex;
+}
+
+.contact__check-wrap {
+  position:relative;
+  margin-top:20px;
+}
+
+
 
 
 
