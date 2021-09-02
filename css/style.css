@@ -210,6 +210,12 @@ input[type="submit"]:hover {
   min-width: 1190px;
 }
 
+.contact section{
+  position:relative;
+  width:1650px;
+  margin:0 auto;
+}
+
 .contact__head {
   position:relative;
   margin-top:90px;
@@ -245,7 +251,19 @@ input[type="submit"]:hover {
   margin-top:20px;
 }
 
+.contact__button-wrap {
+  display: flex;
+  justify-content: space-between;
+}
 
+.contact__select-wrap{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__check-wrap{
+  width:1650px;
+}
 
 
 
