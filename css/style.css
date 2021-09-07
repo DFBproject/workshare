@@ -247,6 +247,10 @@ input[type="submit"]:hover {
   display: flex;
 }
 
+.contact__select-wrap ul li a {
+  color:var(--text-color-light)
+}
+
 .contact__check-wrap {
   position: relative;
   margin-top: 20px;
@@ -264,6 +268,21 @@ input[type="submit"]:hover {
 
 .contact__check-wrap {
   width: 1650px;
+}
+
+table.contact__check-table {
+  width:100%;
+}
+
+table.contact__check-table tr th {
+  border-top:1px solid #333;
+  border-bottom:1px solid #333;
+  padding: 13px 0px;
+}
+
+table.contact__check-table tr td {
+  padding: 13px 0px;
+  text-align: center;
 }
 
 /*========== HEADER ==========*/
