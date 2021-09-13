@@ -232,6 +232,16 @@ input[type="submit"]:hover {
   color: var(--title-color);
 }
 
+.contact__button , div input#user-name-work , div input.contact__input {
+  height:36px;
+}
+
+.contact__button {
+  background-color: #fff;
+  border:1px solid #adadad;
+  border-radius: 2px;
+}
+
 .contact__button-wrap {
   position: relative;
   margin-top: 30px;
@@ -243,12 +253,31 @@ input[type="submit"]:hover {
   display: flex;
 }
 
+div input#user-name-work {
+  width: 65px;
+}
+
+.contact__select-wrap ul li:nth-child(1) {
+  font-weight: var(--weight-black);
+  color:var(--text-color);
+}
+
+.contact__select-wrap ul li {
+  margin: 0px 10px 0px 0px;
+}
+
+
 .contact__select-wrap ul {
   display: flex;
 }
 
 .contact__select-wrap ul li a {
-  color:var(--text-color-light)
+  color:var(--text-color-light);
+}
+
+.contact__check-table .fa-user-circle:before {
+  color:var(--main-color);
+  padding:8px;
 }
 
 .contact__check-wrap {
