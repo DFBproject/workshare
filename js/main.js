@@ -1,3 +1,4 @@
+
 /*==================== SHOW NAVBAR ====================*/
 const showMenu = (headerToggle, navbarId) =>{
     const toggleBtn = document.getElementById(headerToggle),
