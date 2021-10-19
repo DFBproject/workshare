@@ -141,12 +141,11 @@
         <div class="contact__head">
           <h2 class="contact__main-name">주소록</h2>
         </div>
-        <div>
-          <div class="contact__button-wrap">
-            <div>
-              <button class="contact__button"><i class="far fa-trash-alt"></i>삭제</button>
-              <button class="contact__button"><i class="far fa-address-book"></i>주소록복사</button>
-            </div>
+        <div class="contact__button-wrap">
+          <div class="delet_copy_btn">
+            <button class="contact__button"><i class="far fa-trash-alt"></i>삭제</button>
+            <button class="contact__button"><i class="far fa-address-book"></i>주소록복사</button>
+          </div>
             <div class="search__content">
               <div class="selectbox">
                 <select>
@@ -162,170 +161,101 @@
                 <button type="button" class="adress__search_btn">검색</button>
               </div>
             </div>
-          </div>
-          <div class="contact__select-wrap">
-            <ul>
-              <li>전체</li>
-              <li><a href="#">ㄱ</a></li>
-              <li><a href="#">ㄴ</a></li>
-              <li><a href="#">ㄷ</a></li>
-              <li><a href="#">ㄹ</a></li>
-              <li><a href="#">ㅁ</a></li>
-              <li><a href="#">ㅂ</a></li>
-              <li><a href="#">ㅅ</a></li>
-              <li><a href="#">ㅇ</a></li>
-              <li><a href="#">ㅈ</a></li>
-              <li><a href="#">ㅊ</a></li>
-              <li><a href="#">ㅋ</a></li>
-              <li><a href="#">ㅌ</a></li>
-              <li><a href="#">ㅍ</a></li>
-              <li><a href="#">ㅎ</a></li>
-              <li><a href="#">a~z</a></li>
-              <li><a href="#">etc</a></li>
-            </ul>
-            <div><i class="fas fa-cog">필드설정</i>
-              <input list="field-setting" placeholder="20" id="user-name-work" name="user-name-work" />
-              <datalist id="field-setting">
-                <option value="50">
-                <option value="40">
-                <option value="30">
-                <option value="20">
-                <option value="10">
-            </datalist>
+        </div>
+        <div class="contact__filter-wrap">
+          <ul class="filter__select">
+            <li>전체</li>
+            <li><a href="#">ㄱ</a></li>
+            <li><a href="#">ㄴ</a></li>
+            <li><a href="#">ㄷ</a></li>
+            <li><a href="#">ㄹ</a></li>
+            <li><a href="#">ㅁ</a></li>
+            <li><a href="#">ㅂ</a></li>
+            <li><a href="#">ㅅ</a></li>
+            <li><a href="#">ㅇ</a></li>
+            <li><a href="#">ㅈ</a></li>
+            <li><a href="#">ㅊ</a></li>
+            <li><a href="#">ㅋ</a></li>
+            <li><a href="#">ㅌ</a></li>
+            <li><a href="#">ㅍ</a></li>
+            <li><a href="#">ㅎ</a></li>
+            <li><a href="#">a~z</a></li>
+            <li><a href="#">etc</a></li>
+          </ul>
+          <div class="field__set">
+            <div class="field__title"><i class="fas fa-cog"></i>필드설정</div>
+            <div class="selectbox">
+              <select>
+                <option data-display="select">10</option>
+                <option value="이름">20</option>
+                <option value="직급">30</option>
+                <option value="부서">40</option>
+              </select>
             </div>
           </div>
-
-          <div class="contact__check-wrap">
-            <div>
-                <div class="" data-target="reservation">
-                  <form action="">
-                    <table class="contact__check-table">
-                        <tr>
-                          <th><input type="checkbox" id="contact-all-check" name="contact-all-check"></th>
-                          <th>이름(표시명)</th>
-                          <th>휴대폰</th>
-                          <th>이메일</th>
-                          <th>팀</th>
-                          <th>직급</th>
-                          <th>그룹</th>
-                          <th><i class="fas fa-star"></i></th>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" id="contact-list-check" name="contact-list-check"></td>
-                          <td><i class="fas fa-user-circle">김사원</i></td>
-                          <td>010-1234-5678</td>
-                          <td>abcdedf@workwhare.com</td>
-                          <td>개발팀</td>
-                          <td>사원</td>
-                          <td>개발팀그룹</td>
-                          <td><i class="fas fa-star"></i></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" id="contact-list-check" name="contact-list-check"></td>
-                          <td><i class="fas fa-user-circle">이대리</i></td>
-                          <td>010-1234-5678</td>
-                          <td>abcdedf@workwhare.com</td>
-                          <td>개발팀</td>
-                          <td>대리</td>
-                          <td>개발팀그룹</td>
-                          <td><i class="fas fa-star"></i></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" id="contact-list-check" name="contact-list-check"></td>
-                          <td><i class="fas fa-user-circle">박팀장</i></td>
-                          <td>010-1234-5678</td>
-                          <td>abcdedf@workwhare.com</td>
-                          <td>인사팀</td>
-                          <td>팀장</td>
-                          <td>전체그룹</td>
-                          <td><i class="fas fa-star"></i></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" id="contact-list-check" name="contact-list-check"></td>
-                          <td><i class="fas fa-user-circle">홍길동</i></td>
-                          <td>010-1234-5678</td>
-                          <td>abcdedf@workwhare.com</td>
-                          <td>경영팀</td>
-                          <td>사원</td>
-                          <td>전체그룹</td>
-                          <td><i class="fas fa-star"></i></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" id="contact-list-check" name="contact-list-check"></td>
-                          <td><i class="fas fa-user-circle">박미생</i></td>
-                          <td>010-1234-5678</td>
-                          <td>abcdedf@workwhare.com</td>
-                          <td>디자인팀</td>
-                          <td>인턴</td>
-                          <td>개발팀그룹</td>
-                          <td><i class="fas fa-star"></i></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" id="contact-list-check" name="contact-list-check"></td>
-                          <td><i class="fas fa-user-circle">강아지</i></td>
-                          <td>010-1234-5678</td>
-                          <td>abcdedf@workwhare.com</td>
-                          <td>디자인팀</td>
-                          <td>사원</td>
-                          <td>디자인팀그룹</td>
-                          <td><i class="fas fa-star"></i></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" id="contact-list-check" name="contact-list-check"></td>
-                          <td><i class="fas fa-user-circle">이사원</i></td>
-                          <td>010-1234-5678</td>
-                          <td>abcdedf@workwhare.com</td>
-                          <td>개발팀</td>
-                          <td>사원</td>
-                          <td>개발팀그룹</td>
-                          <td><i class="fas fa-star"></i></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" id="contact-list-check" name="contact-list-check"></td>
-                          <td><i class="fas fa-user-circle">이대리</i></td>
-                          <td>010-1234-5678</td>
-                          <td>abcdedf@workwhare.com</td>
-                          <td>개발팀</td>
-                          <td>대리</td>
-                          <td>개발팀그룹</td>
-                          <td><i class="fas fa-star"></i></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" id="contact-list-check" name="contact-list-check"></td>
-                          <td><i class="fas fa-user-circle">박팀장</i></td>
-                          <td>010-1234-5678</td>
-                          <td>abcdedf@workwhare.com</td>
-                          <td>인사팀</td>
-                          <td>팀장</td>
-                          <td>전체그룹</td>
-                          <td><i class="fas fa-star"></i></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" id="contact-list-check" name="contact-list-check"></td>
-                          <td><i class="fas fa-user-circle">하사원</i></td>
-                          <td>010-1234-5678</td>
-                          <td>abcdedf@workwhare.com</td>
-                          <td>경영팀</td>
-                          <td>사원</td>
-                          <td>전체그룹</td>
-                          <td><i class="fas fa-star"></i></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" id="contact-list-check" name="contact-list-check"></td>
-                          <td><i class="fas fa-user-circle">박인턴</i></td>
-                          <td>010-1234-5678</td>
-                          <td>abcdedf@workwhare.com</td>
-                          <td>디자인팀</td>
-                          <td>인턴</td>
-                          <td>개발팀그룹</td>
-                          <td><i class="fas fa-star"></i></td>
-                        </tr>
-                    </table>
-                  </form>  
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div class="adress__table-wrap">
+          <ul class="adress__table_th">
+            <li><input type="checkbox" id="contact-all-check" name="contact-all-check"></li>
+            <li>이름(표시명)</li>
+            <li>휴대폰</li>
+            <li>이메일</li>
+            <li>팀</li>
+            <li>직급</li>
+            <li>그룹</li>
+            <li><i class="fas fa-star"></i></li>
+          </ul>
+          <hr class="adress_table_line" style="border: solid 1px #e2e2e2;">
+          <ul class="adress_table_tr">
+            <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+            <li><i class="fas fa-user-circle"></i>김사원</li>
+            <li>010-1234-5678</li>
+            <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+            <li>개발팀</li>
+            <li>사원</li>
+            <li>개발팀</li>
+            <li><i class="fas fa-star"></i></li>
+          </ul>
+          <ul class="adress_table_tr">
+            <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+            <li><i class="fas fa-user-circle"></i>이대리</li>
+            <li>010-1234-5678</li>
+            <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+            <li>개발팀</li>
+            <li>대리</li>
+            <li>개발팀</li>
+            <li><i class="fas fa-star"></i></li>
+          </ul>
+          <ul class="adress_table_tr">
+            <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+            <li><i class="fas fa-user-circle"></i>박팀장</li>
+            <li>010-1234-5678</li>
+            <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+            <li>인사팀</li>
+            <li>팀장</li>
+            <li>전체</li>
+            <li><i class="fas fa-star"></i></li>
+          </ul>
+          <ul class="adress_table_tr">
+            <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+            <li><i class="fas fa-user-circle"></i>홍길동</li>
+            <li>010-1234-5678</li>
+            <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+            <li>경영팀</li>
+            <li>사원</li>
+            <li>전체</li>
+            <li><i class="fas fa-star"></i></li>
+          </ul>
+          <ul class="adress_table_tr">
+            <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+            <li><i class="fas fa-user-circle"></i>박미생</li>
+            <li>010-1234-5678</li>
+            <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+            <li>디자인팀</li>
+            <li>인턴</li>
+            <li>개발팀</li>
+            <li><i class="fas fa-star"></i></li>
+          </ul>
         </div>
       </section>
   </main>

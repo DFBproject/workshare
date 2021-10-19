@@ -27,6 +27,9 @@
   --large-font-size: 1.13rem;
   --x-large-size: 1.5rem;
   --xx-large-size: 2rem;
+  --media-small: 0.3rem;
+  --media-normal: 0.8rem;
+  --media-large: 1.5rem;
 
   /*========== Font weight ==========*/
   --weight-thin: 100;
@@ -224,6 +227,7 @@ input[type="submit"]:hover {
 }
 
 /*========== adress page ==========*/
+
 .contact {
   margin: 4rem 3rem 4rem 7rem;
   overflow: hidden;
@@ -272,10 +276,11 @@ div input.contact__input {
   margin-top: 30px;
 }
 
-.contact__select-wrap {
+.contact__filter-wrap {
   position: relative;
   margin-top: 30px;
   display: flex;
+  align-items: center;
 }
 
 .search__content {
@@ -299,60 +304,115 @@ div input.contact__input {
   background-color: #0f4b86;
 }
 
-div input#user-name-work {
-  width: 65px;
-}
-
-.contact__select-wrap ul li:nth-child(1) {
-  font-weight: var(--weight-black);
-  color: var(--text-color);
-}
-
-.contact__select-wrap ul li {
-  margin: 0px 10px 0px 0px;
-}
-
-.contact__select-wrap ul {
-  display: flex;
-}
-
-.contact__select-wrap ul li a {
-  color: var(--text-color-light);
-}
-
-.contact__check-table .fa-user-circle:before {
-  color: var(--main-color);
-  padding: 8px;
-}
-
-.contact__check-wrap {
-  position: relative;
-  margin-top: 20px;
-}
-
 .contact__button-wrap {
   display: flex;
   justify-content: space-between;
 }
 
-.contact__select-wrap {
+.contact__filter-wrap {
   display: flex;
   justify-content: space-between;
 }
 
-table.contact__check-table {
-  width: 100%;
+.field__set {
+  display: flex;
+  align-items: center;
 }
 
-table.contact__check-table tr th {
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-  padding: 13px 0px;
+.filter__select {
+  display: flex;
+  align-items: center;
 }
 
-table.contact__check-table tr td {
-  padding: 13px 0px;
+/*adress table*/
+
+.adress__table-wrap {
+  margin-top: 1rem;
   text-align: center;
+}
+
+.adress__table_th {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.adress__table_th li:nth-of-type(1) {
+  width: 8%;
+}
+
+.adress__table_th li:nth-of-type(2) {
+  width: 15%;
+}
+
+.adress__table_th li:nth-of-type(3) {
+  width: 20%;
+}
+
+.adress__table_th li:nth-of-type(4) {
+  width: 20%;
+}
+
+.adress__table_th li:nth-of-type(5) {
+  width: 10%;
+}
+
+.adress__table_th li:nth-of-type(6) {
+  width: 10%;
+}
+
+.adress__table_th li:nth-of-type(7) {
+  width: 10%;
+}
+
+.adress__table_th li:nth-of-type(8) {
+  width: 7%;
+}
+
+.adress_table_tr {
+  display: flex;
+  width: 100%;
+  margin: 0.5rem 0rem 1rem 0rem;
+}
+
+.adress_table_tr li:nth-of-type(1) {
+  width: 8%;
+}
+
+.adress_table_tr li:nth-of-type(2) {
+  width: 15%;
+}
+
+.adress_table_tr li:nth-of-type(3) {
+  width: 20%;
+}
+
+.adress_table_tr li:nth-of-type(4) {
+  width: 20%;
+}
+
+.adress_table_tr li:nth-of-type(5) {
+  width: 10%;
+}
+
+.adress_table_tr li:nth-of-type(6) {
+  width: 10%;
+}
+
+.adress_table_tr li:nth-of-type(7) {
+  width: 10%;
+}
+
+.adress_table_tr li:nth-of-type(8) {
+  width: 7%;
+}
+
+.adress_table_line {
+  border: solid 1px #adadad;
+}
+
+.fa-user-circle {
+  margin-right: 1rem;
 }
 
 /*========== HEADER ==========*/
@@ -568,6 +628,18 @@ table.contact__check-table tr td {
 @media screen and (max-width: 320px) {
   .header__search {
     width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*adress*/
+  .adress_table_tr li {
+    font-size: var(--media-normal);
+  }
+
+  .adress_mail {
+    display: flex;
+    flex-direction: column;
   }
 }
 
