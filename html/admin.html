@@ -40,11 +40,17 @@
                 <div class="remember">
                     <input type="checkbox" id="remember__check"><label for="remember__check">Remember</label>
                 </div>
-                <div class="password">Forgot Password?</div>
+                <button class="passwordBtn" onclick="myFunction()">Forget Password?</button>
             </div>
             <input type="submit" value="Login">
         </form>
     </div>
+
+    <script>
+        function myFunction() {
+        confirm("관리자에게 임시비밀번호를 신청합니다");
+}
+    </script>
 
 </body>
 </html>

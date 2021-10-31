@@ -48,3 +48,8 @@ adressFilter.addEventListener('click', (e) => {
        }
     });
 });
+
+
+function passwordBtn(){
+    confirm("관리자에게 임시비밀번호를 받겠습니까?");
+  }
