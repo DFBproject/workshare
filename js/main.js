@@ -25,3 +25,26 @@ function colorLink(){
 }
 
 linkColor.forEach(l => l.addEventListener('click', colorLink))
+
+
+//adress filter
+
+const adressFilter = document.querySelector('.filter__select');
+const adressNameFilter = document.querySelector('.adress__table-wrap');
+const adress = document.querySelectorAll('.adress_table_tr');
+adressFilter.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter;
+    if(filter == null){
+        return;
+    }
+    console.log(filter);
+
+    adress.forEach((adress_table_tr) => {
+       console.log(adress_table_tr.dataset.type);
+       if(filter === '*' || filter === adress_table_tr.dataset.type) {
+        adress_table_tr.classList.remove('invisible');
+       } else{
+        adress_table_tr.classList.add('invisible');
+       }
+    });
+});
