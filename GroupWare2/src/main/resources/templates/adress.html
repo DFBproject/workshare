@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkShare</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/nice-select.css">
+
+    <!--link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+    crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  
+
+
+  <!--========== MAIN JS ==========-->
+
+
+  </head>
+
+<body>
+  <!--========== HEADER ==========-->
+  <header class="header">
+      <div class="header__container">
+          <img src="../images/bear.png" alt="" class="header__img">
+
+          <a href="#" class="header__logo ">WorkShare</a>
+
+          <div class="header__search">
+              <input type="search" placeholder="Search" class="header__input">
+              <i class="fas fa-search header__icon"></i>
+          </div>
+
+          <div class="header__toggle">
+              <i class="fas fa-bars" id="header-toggle"></i>
+          </div>
+      </div>
+  </header>
+
+  <!--========== NAV ==========-->
+  <div class="nav" id="navbar">
+      <nav class="nav__container">
+          <div>
+              <a href="#" class="nav__link nav__logo">
+                  <span class="nav__logo-name">Work</span><span class="nav__logo-name_back">Share</span>
+                  
+              </a>
+
+              <div class="nav__list">
+                  <div class="nav__items">
+                      <h3 class="nav__subtitle">Profile</h3>
+                      <a href="home.html" class="nav__link active">
+                          <i class="fas fa-home nav-icon"></i>
+                          <span class="nav__name">홈</span>
+                      </a> <!--home-->                      
+                      <div class="nav__dropdown">
+                          <a href="#" class="nav__link">
+                              <i class="far fa-clock nav-icon"></i>
+                              <span class="nav__name">출퇴근관리</span>
+                              <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
+                          </a>
+                          <div class="nav__dropdown-collapse">
+                              <div class="nav__dropdown-content">
+                                  <a href="#" class="nav__dropdown-item">달력형</a>
+                                  <a href="#" class="nav__dropdown-item">목록형</a>
+                                  <a href="#" class="nav__dropdown-item">휴가신청</a>
+                              </div>
+                          </div>
+                      </div> <!--출퇴근관리-->                      
+                      <div class="nav__dropdown">
+                          <a href="#" class="nav__link">
+                              <i class="far fa-calendar-check nav-icon"></i>
+                              <span class="nav__name">워크플로우</span>
+                              <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
+                          </a>
+                          <div class="nav__dropdown-collapse">
+                              <div class="nav__dropdown-content">
+                                  <a href="#" class="nav__dropdown-item">근무관리</a>
+                                  <a href="#" class="nav__dropdown-item">휴가관리</a>
+                              </div>
+                          </div>
+                      </div><!--워크플로우-->
+                      <div class="nav__dropdown">        
+                        <a href="./html/adress.html" class="nav__link">
+                          <i class="far fa-address-book nav-icon"></i>
+                          <span class="nav__name">주소록</span>
+                          <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
+                        </a>
+                        <div class="nav__dropdown-collapse">
+                            <div class="nav__dropdown-content">
+                                <a href="adress.html" class="nav__dropdown-item">전체주소록</a>
+                                <a href="adress_private.html" class="nav__dropdown-item">개인주소록</a>
+                            </div>
+                        </div>
+                      </div><!--주소록-->
+                    <div class="nav__items">
+                      <h3 class="nav__subtitle">설정</h3>
+
+                      <a href="#" class="nav__link">
+                          <i class="far fa-user-circle nav-icon"></i>
+                          <span class="nav__name">프로필</span>
+                      </a>
+
+                      <div class="nav__dropdown">
+                          <a href="#" class="nav__link">
+                              <i class="far fa-building "></i>
+                              <span class="nav__name">회사</span>
+                              <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
+                          </a>
+
+                          <div class="nav__dropdown-collapse">
+                              <div class="nav__dropdown-content">
+                                  <a href="#" class="nav__dropdown-item">직원관리</a>
+                                  <a href="#" class="nav__dropdown-item">회사설정</a>
+                              </div>
+                          </div>
+
+                      </div>
+                    </div><!--설정-->
+                  </div>
+              </div>
+          <a href="#" class="nav__link nav__logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav__name">Log Out</span>
+          </a>
+      </nav>
+  </div>
+
+  <!--========== CONTENTS ==========-->
+  <main>
+      <section class="contact">
+        <div class="contact__head">
+          <h2 class="contact__main-name">주소록</h2>
+        </div>
+        <div class="contact__button-wrap">
+          <div class="delet_copy_btn">
+            <button class="contact__button"><i class="far fa-trash-alt"></i>삭제</button>
+            <button class="contact__button"><i class="far fa-address-book"></i>주소록복사</button>
+          </div>
+            <div class="search__content">
+              <div class="selectbox">
+                <select>
+                  <option data-display="select">Nothing</option>
+                  <option value="이름">이름</option>
+                  <option value="직급">직급</option>
+                  <option value="부서">부서</option>
+                  <option value="전화번호">전화번호</option>
+                </select>
+              </div>
+              <div class="search__input">
+                <input type="text" id="adress__search">
+                <button type="button" class="adress__search_btn">검색</button>
+              </div>
+            </div>
+        </div>
+        <div class="contact__filter-wrap">
+          <ul class="filter__select">
+            <li><button class="filter__btn" data-filter="*">전체</button></li>
+            <li><button class="filter__btn" data-filter="ㄱ">ㄱ</button></li>
+            <li><button class="filter__btn" data-filter="ㄴ">ㄴ</button></li>
+            <li><button class="filter__btn" data-filter="ㄷ">ㄷ</button></li>
+            <li><button class="filter__btn" data-filter="ㄹ">ㄹ</button></li>
+            <li><button class="filter__btn" data-filter="ㅁ">ㅁ</button></li>
+            <li><button class="filter__btn" data-filter="ㅂ">ㅂ</button></li>
+            <li><button class="filter__btn" data-filter="ㅅ">ㅅ</button></li>
+            <li><button class="filter__btn" data-filter="ㅇ">ㅇ</button></li>
+            <li><button class="filter__btn" data-filter="ㅈ">ㅈ</button></li>
+            <li><button class="filter__btn" data-filter="ㅊ">ㅊ</button></li>
+            <li><button class="filter__btn" data-filter="ㅋ">ㅋ</button></li>
+            <li><button class="filter__btn" data-filter="ㅌ">ㅌ</button></li>
+            <li><button class="filter__btn" data-filter="ㅍ">ㅍ</button></li>
+            <li><button class="filter__btn" data-filter="ㅎ">ㅎ</button></li>
+            <li><button class="filter__btn" data-filter="a_z">a~z</button></li>
+            <li><button class="filter__btn" data-filter="etc">etc</button></li>
+          </ul>
+          <div class="field__set">
+            <div class="field__title">
+              <i class="fas fa-cog"></i>필드설정</div>
+            <div class="selectbox">
+              <select>
+                <option data-display="select">10</option>
+                <option value="이름">20</option>
+                <option value="직급">30</option>
+                <option value="부서">40</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="adress__table-wrap">
+          <ul class="adress__table_th">
+            <li><input type="checkbox" id="contact-all-check" name="contact-all-check"></li>
+            <li>이름(표시명)</li>
+            <li>휴대폰</li>
+            <li>이메일</li>
+            <li>팀</li>
+            <li>직급</li>
+            <li>그룹</li>
+            <li><i class="fas fa-star"></i></li>
+          </ul>
+          <hr class="adress_table_line" style="border: solid 1px #e2e2e2;">
+          <div id="adress_table_tr_wrapper">
+            <a href="" class="adress_table_tr" data-type="ㄱ">
+              <ul>
+                <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+                <li><i class="fas fa-user-circle"></i>김사원</li>
+                <li>010-1234-5678</li>
+                <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+                <li>개발팀</li>
+                <li>사원</li>
+                <li>개발팀</li>
+                <li><i class="fas fa-star"></i></li>
+              </ul>
+            </a>
+            <a href="" class="adress_table_tr" data-type="ㅇ">
+              <ul>
+                <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+                <li><i class="fas fa-user-circle"></i>이대리</li>
+                <li>010-1234-5678</li>
+                <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+                <li>개발팀</li>
+                <li>대리</li>
+                <li>개발팀</li>
+                <li><i class="fas fa-star"></i></li>
+              </ul>
+            </a>
+            <a href="" class="adress_table_tr" data-type="ㅂ">
+              <ul>
+                <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+                <li><i class="fas fa-user-circle"></i>박팀장</li>
+                <li>010-1234-5678</li>
+                <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+                <li>인사팀</li>
+                <li>팀장</li>
+                <li>전체</li>
+                <li><i class="fas fa-star"></i></li>
+              </ul>
+            </a>
+            <a href="" class="adress_table_tr" data-type="ㅎ">
+              <ul>
+                <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+                <li><i class="fas fa-user-circle"></i>홍길동</li>
+                <li>010-1234-5678</li>
+                <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+                <li>경영팀</li>
+                <li>사원</li>
+                <li>전체</li>
+                <li><i class="fas fa-star"></i></li>
+              </ul>
+            </a>           
+            <a href="" class="adress_table_tr" data-type="ㅂ">
+              <ul >
+                <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+                <li><i class="fas fa-user-circle"></i>박미생</li>
+                <li>010-1234-5678</li>
+                <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+                <li>디자인팀</li>
+                <li>인턴</li>
+                <li>개발팀</li>
+                <li><i class="fas fa-star"></i></li>
+              </ul>
+            </a>
+          </div>
+        </div>
+      </section>
+  </main>
+
+
+  <script type="text/javascript" src="../js/jquery.js"></script> 
+  <script type="text/javascript" src="../js/jquery.nice-select.js"></script>
+
+  <script type="text/javascript"  src="/js/main.js"></script>
+  
+  <script>
+  $(document).ready(function() {
+    $('select').niceSelect();
+  });
+  </script>
+
+
+</body>
+</html>

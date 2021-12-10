@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkShare</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <!--link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+    crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <div class="header__container">
+            <img src="../images/bear.png" alt="" class="header__img">
+
+            <a href="#" class="header__logo ">WorkShare</a>
+
+            <div class="header__search">
+                <input type="search" placeholder="Search" class="header__input">
+                <i class="fas fa-search header__icon"></i>
+            </div>
+
+            <div class="header__toggle">
+                <i class="fas fa-bars" id="header-toggle"></i>
+            </div>
+        </div>
+    </header>
+
+    <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <a href="#" class="nav__link nav__logo">
+                    <span class="nav__logo-name">Work</span><span class="nav__logo-name_back">Share</span>
+                    
+                </a>
+
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Profile</h3>
+
+                        <a href="#" class="nav__link active">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span class="nav__name">홈</span>
+                        </a>
+                        
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class="far fa-clock nav-icon"></i>
+                                <span class="nav__name">출퇴근관리</span>
+                                <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="#" class="nav__dropdown-item">달력형</a>
+                                    <a href="#" class="nav__dropdown-item">목록형</a>
+                                    <a href="#" class="nav__dropdown-item">휴가신청</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class="far fa-calendar-check nav-icon"></i>
+                                <span class="nav__name">워크플로우</span>
+                                <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="#" class="nav__dropdown-item">근무관리</a>
+                                    <a href="#" class="nav__dropdown-item">휴가관리</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="./html/adress.html" class="nav__link">
+                            <i class="far fa-address-book nav-icon"></i>
+                            <span class="nav__name">주소록</span>
+                        </a>
+
+                    </div>
+
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">설정</h3>
+
+                        <a href="#" class="nav__link">
+                            <i class="far fa-user-circle nav-icon"></i>
+                            <span class="nav__name">프로필</span>
+                        </a>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class="far fa-building "></i>
+                                <span class="nav__name">회사</span>
+                                <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="#" class="nav__dropdown-item">직원관리</a>
+                                    <a href="#" class="nav__dropdown-item">회사설정</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav__link nav__logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav__name">Log Out</span>
+            </a>
+        </nav>
+    </div>
+
+    <!--========== CONTENTS ==========-->
+    <main>
+        <section>
+            
+        </section>
+    </main>
+
+    <!--========== MAIN JS ==========-->
+    <script src="main.js"></script>
+
+    </body>
+</html>
