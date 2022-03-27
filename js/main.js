@@ -1,5 +1,38 @@
+    function diligence_menu(){
+        let click = document.getElementById("diligence-admin");
+        if(click.style.display === "none"){
+            click.style.display = "block";
+
+        }else{
+            click.style.display = "none";
+
+        }
+    }
+
+        function work_menu(){
+        let click = document.getElementById("work-admin");
+        if(click.style.display === "none"){
+            click.style.display = "block";
+
+        }else{
+            click.style.display = "none";
+
+        }
+    }
+
+        function dp_menu(){
+        let click = document.getElementById("address-admin");
+        if(click.style.display === "none"){
+            click.style.display = "block";
+
+        }else{
+            click.style.display = "none";
+
+        }
+    }
 
 /*==================== SHOW NAVBAR ====================*/
+/*
 const showMenu = (headerToggle, navbarId) =>{
     const toggleBtn = document.getElementById(headerToggle),
     nav = document.getElementById(navbarId)
@@ -15,7 +48,7 @@ const showMenu = (headerToggle, navbarId) =>{
     }
 }
 showMenu('header-toggle','navbar')
-
+*/
 //calendar
 
 let date = new Date();

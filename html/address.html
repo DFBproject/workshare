@@ -26,6 +26,7 @@
   </head>
 
 <body>
+<div class="container">
   <!--========== HEADER ==========-->
   <header class="header">
       <div class="header__container">
@@ -47,101 +48,47 @@
   </header>
 
   <!--========== NAV ==========-->
-  <div class="nav" id="navbar">
-      <nav class="nav__container">
-          <div>
-              <!-- <a href="#" class="nav__link nav__logo">
-                  <span class="nav__logo-name">Work</span><span class="nav__logo-name_back">Share</span>
-                  
-              </a> -->
-
-              <div class="nav__list">
-                  <div class="nav__items">
-                      <h3 class="nav__subtitle">Profile</h3>
-                      <a href="home.html" class="nav__link active">
-                          <i class="fas fa-home nav-icon"></i>
-                          <span class="nav__name">홈</span>
-                      </a> <!--home-->                      
-                      <div class="nav__dropdown">
-                          <a href="#" class="nav__link">
-                              <i class="far fa-clock nav-icon"></i>
-                              <span class="nav__name">근태관리</span>
-                              <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
-                          </a>
-                          <div class="nav__dropdown-collapse">
-                              <div class="nav__dropdown-content">
-                                  <a href="./commute_calendar.html" class="nav__dropdown-item">달력형</a>
-                                  <a href="#" class="nav__dropdown-item">목록형</a>
-                                  <a href="#" class="nav__dropdown-item">휴가신청</a>
-                              </div>
-                          </div>
-                      </div> <!--출퇴근관리-->                      
-                      <div class="nav__dropdown">
-                          <a href="#" class="nav__link">
-                              <i class="far fa-calendar-check nav-icon"></i>
-                              <span class="nav__name">워크플로우</span>
-                              <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
-                          </a>
-                          <div class="nav__dropdown-collapse">
-                              <div class="nav__dropdown-content">
-                                  <a href="#" class="nav__dropdown-item">근무관리</a>
-                                  <a href="#" class="nav__dropdown-item">휴가관리</a>
-                              </div>
-                          </div>
-                      </div><!--워크플로우-->
-                      <div class="nav__dropdown">        
-                        <a href="./html/adress.html" class="nav__link">
-                          <i class="far fa-address-book nav-icon"></i>
-                          <span class="nav__name">주소록</span>
-                          <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
-                        </a>
-                        <div class="nav__dropdown-collapse">
-                            <div class="nav__dropdown-content">
-                                <a href="adress.html" class="nav__dropdown-item">전체주소록</a>
-                                <a href="adress_private.html" class="nav__dropdown-item">개인주소록</a>
-                            </div>
-                        </div>
-                      </div><!--주소록-->
-                    <div class="nav__items">
-                      <h3 class="nav__subtitle">설정</h3>
-
-                      <a href="#" class="nav__link">
-                          <i class="far fa-user-circle nav-icon"></i>
-                          <span class="nav__name">프로필</span>
-                      </a>
-
-                      <div class="nav__dropdown">
-                          <a href="#" class="nav__link">
-                              <i class="far fa-building "></i>
-                              <span class="nav__name">회사</span>
-                              <i class="fas fa-caret-down nav__icon nav__dropdown-icon"></i>
-                          </a>
-
-                          <div class="nav__dropdown-collapse">
-                              <div class="nav__dropdown-content">
-                                  <a href="#" class="nav__dropdown-item">직원관리</a>
-                                  <a href="#" class="nav__dropdown-item">회사설정</a>
-                              </div>
-                          </div>
-
-                      </div>
-                    </div><!--설정-->
-                  </div>
-              </div>
-          <a href="#" class="nav__link nav__logout">
-              <i class="fas fa-sign-out-alt"></i>
-              <span class="nav__name">Log Out</span>
-          </a>
-      </nav>
-  </div>
+  <main>
+    <aside>
+      <div class="aside-menu">
+          <h3 class="aside-title"></h3>
+          <ul>
+              <li><a href="">홈</a></li>
+              <li class="dropdown">
+                  <span class="sub-menu" onclick="diligence_menu()">근태관리</span>
+                  <ul class="submenu_drop" id="diligence-admin">
+                      <li><a href="">달력형</a></li>
+                      <li><a href="">목록형</a></li>
+                      <li><a href="">휴가신청</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown">
+                  <span class="sub-menu" onclick="work_menu()">워커플로우</span>
+                  <ul class="submenu_drop" id="work-admin">
+                      <li><a href="">근무관리</a></li>
+                      <li><a href="">휴가관리</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown">
+                  <span class="sub-menu" onclick="dp_menu()">주소록</span>
+                  <ul class="submenu_drop" id="address-admin">
+                      <li><a href="./html/address.html" class="active">전체주소록</a></li>
+                      <li><a href="">개인주소록</a></li>
+                  </ul>
+              </li>
+          </ul>
+          <h3 class="aside-title">관리자</h3>
+          <ul>
+              <li><a href="">직원관리</a></li>
+              <li><a href="">회사설정</a></li>
+          </ul>
+      </div>
+  </aside>
 
   <!--========== CONTENTS ==========-->
-  <main>
-      <section class="contact">
-        <div class="contact__head">
-          <h2 class="contact__main-name">주소록</h2>
-        </div>
-        <div class="contact__button-wrap">
+   <div class="content">
+      <h2 class="contact__main-name">주소록</h2>
+      <div class="contact__button-wrap">
           <div class="delet_copy_btn">
             <button class="contact__button"><i class="far fa-trash-alt"></i>삭제</button>
             <button class="contact__button"><i class="far fa-address-book"></i>주소록복사</button>
@@ -157,12 +104,12 @@
                 </select>
               </div>
               <div class="search__input">
-                <input type="text" id="adress__search">
-                <button type="button" class="adress__search_btn">검색</button>
+                <input type="text" id="address__search">
+                <button type="button" class="address__search_btn">검색</button>
               </div>
             </div>
         </div>
-        <div class="contact__filter-wrap">
+      <div class="contact__filter-wrap">
           <ul class="filter__select">
             <li><button class="filter__btn" data-filter="*">전체</button></li>
             <li><button class="filter__btn" data-filter="ㄱ">ㄱ</button></li>
@@ -195,8 +142,8 @@
             </div>
           </div>
         </div>
-        <div class="adress__table-wrap">
-          <ul class="adress__table_th">
+      <div class="address__table-wrap">
+          <ul class="address__table_th">
             <li><input type="checkbox" id="contact-all-check" name="contact-all-check"></li>
             <li>이름(표시명)</li>
             <li>휴대폰</li>
@@ -206,62 +153,62 @@
             <li>그룹</li>
             <li><i class="fas fa-star"></i></li>
           </ul>
-          <hr class="adress_table_line" style="border: solid 1px #e2e2e2;">
-          <div id="adress_table_tr_wrapper">
-            <a href="" class="adress_table_tr" data-type="ㄱ">
+          <hr class="address_table_line" style="border: solid 1px #e2e2e2;">
+          <div id="address_table_tr_wrapper">
+            <a href="" class="address_table_tr" data-type="ㄱ">
               <ul>
-                <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+                <li><input type="checkbox" id="contact-list-check1" name="contact-list-check"></li>
                 <li><i class="fas fa-user-circle"></i>김사원</li>
                 <li>010-1234-5678</li>
-                <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+                <li class="address_mail">abcdedf <span>@workshare.com</span></li>
                 <li>개발팀</li>
                 <li>사원</li>
                 <li>개발팀</li>
                 <li><i class="fas fa-star"></i></li>
               </ul>
             </a>
-            <a href="" class="adress_table_tr" data-type="ㅇ">
+            <a href="" class="address_table_tr" data-type="ㅇ">
               <ul>
-                <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+                <li><input type="checkbox" id="contact-list-check2" name="contact-list-check"></li>
                 <li><i class="fas fa-user-circle"></i>이대리</li>
                 <li>010-1234-5678</li>
-                <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+                <li class="address_mail">abcdedf <span>@workshare.com</span></li>
                 <li>개발팀</li>
                 <li>대리</li>
                 <li>개발팀</li>
                 <li><i class="fas fa-star"></i></li>
               </ul>
             </a>
-            <a href="" class="adress_table_tr" data-type="ㅂ">
+            <a href="" class="address_table_tr" data-type="ㅂ">
               <ul>
-                <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+                <li><input type="checkbox" id="contact-list-check3" name="contact-list-check"></li>
                 <li><i class="fas fa-user-circle"></i>박팀장</li>
                 <li>010-1234-5678</li>
-                <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+                <li class="address_mail">abcdedf <span>@workshare.com</span></li>
                 <li>인사팀</li>
                 <li>팀장</li>
                 <li>전체</li>
                 <li><i class="fas fa-star"></i></li>
               </ul>
             </a>
-            <a href="" class="adress_table_tr" data-type="ㅎ">
+            <a href="" class="address_table_tr" data-type="ㅎ">
               <ul>
-                <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+                <li><input type="checkbox" id="contact-list-check4" name="contact-list-check"></li>
                 <li><i class="fas fa-user-circle"></i>홍길동</li>
                 <li>010-1234-5678</li>
-                <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+                <li class="address_mail">abcdedf <span>@workshare.com</span></li>
                 <li>경영팀</li>
                 <li>사원</li>
                 <li>전체</li>
                 <li><i class="fas fa-star"></i></li>
               </ul>
-            </a>           
-            <a href="" class="adress_table_tr" data-type="ㅂ">
+            </a>
+            <a href="" class="address_table_tr" data-type="ㅂ">
               <ul >
-                <li><input type="checkbox" id="contact-list-check" name="contact-list-check"></li>
+                <li><input type="checkbox" id="contact-list-check5" name="contact-list-check"></li>
                 <li><i class="fas fa-user-circle"></i>박미생</li>
                 <li>010-1234-5678</li>
-                <li class="adress_mail">abcdedf <span>@workwhare.com</span></li>
+                <li class="address_mail">abcdef <span>@workshare.com</span></li>
                 <li>디자인팀</li>
                 <li>인턴</li>
                 <li>개발팀</li>
@@ -270,8 +217,10 @@
             </a>
           </div>
         </div>
-      </section>
+  </div>
+
   </main>
+</div>
 
 
   <script type="text/javascript" src="../js/jquery.js"></script> 
