@@ -1,35 +1,58 @@
-    function diligence_menu(){
-        let click = document.getElementById("diligence-admin");
-        if(click.style.display === "none"){
-            click.style.display = "block";
+//*aisde menu*//
 
-        }else{
-            click.style.display = "none";
+var vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+window.addEventListener('resize', function () {
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+});
+document.documentElement.addEventListener('touchstart', function (event) {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+}, false);
+window.addEventListener('resize', function (event) {
+  location.reload();
+});
+var aside = document.querySelector('aside');
 
-        }
-    }
+function setMyCookie() {
+  var asideToggleCookie = $('aside').hasClass('active') ? 'isActive' : 'notActive';
+  var asideSubmenuCookie = $('.sub-menu').hasClass('active') ? 'isActive' : 'notActive';
+  $.cookie('asideToggleCookie', asideToggleCookie, {
+    path: '/'
+  });
+  $.cookie('asideSubmenuCookie', asideSubmenuCookie, {
+    path: '/'
+  });
+}
 
-        function work_menu(){
-        let click = document.getElementById("work-admin");
-        if(click.style.display === "none"){
-            click.style.display = "block";
 
-        }else{
-            click.style.display = "none";
+if ($.cookie('asideToggleCookie') == 'isActive') {
+  $('aside').addClass('active');
+} else {
+  $('aside').removeClass('active');
+}
 
-        }
-    }
+var asideMenu = document.querySelector('.aside-toggle-menu');
+var asideSubMenu = document.getElementsByClassName('sub-menu');
 
-        function dp_menu(){
-        let click = document.getElementById("address-admin");
-        if(click.style.display === "none"){
-            click.style.display = "block";
+if (aside) {
+  var openSubMenu = function openSubMenu(e) {
+    var subMenu = e.target;
+    subMenu.classList.toggle('active');
+  };
 
-        }else{
-            click.style.display = "none";
+  asideMenu.addEventListener('click', function () {
+    aside.classList.toggle('active');
+    location.reload();
+    setMyCookie();
+  });
+  Array.from(asideSubMenu).forEach(function (asideSubMenu) {
+    return asideSubMenu.addEventListener('click', openSubMenu);
+  });
+}
 
-        }
-    }
 
 /*==================== SHOW NAVBAR ====================*/
 /*
